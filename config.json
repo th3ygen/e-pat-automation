@@ -1,0 +1,25 @@
+{
+    "automateLogin": false,
+    "credential": {
+        "username": "stud_id",
+        "password": "your_password"
+    },
+
+    "rating": {
+        "min": 4,
+        "max": 5
+    },
+
+    "comment": {
+        "suggestion": [
+            "none"
+        ],
+        "dislike": [
+            "none"
+        ],
+        "like": [
+            "-",
+            "Able to relate the lecture with current issue and real life situation which boosts my understanding significantly"
+        ]
+    }
+}

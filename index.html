@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+        <title>EZ-PAT</title>
+        <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/global.css">
+    </head>
+
+    <body>
+        <div class="container" style="height: 100vh">
+            <div class="row h-100 align-items-center justify-content-center">
+                <div class="col-9">
+                    <div class="card">
+                        <div class="card-header" id="header">
+                            <span id="title">Specifications</span>
+                            <div id="spinner" class="spinner-border spinner-border-sm text-primary" style="float: right;" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </div>
+                        <div class="card-body" id="form">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Minimum rating</label>
+                                        <input type="number" min="1" max="5" class="form-control" id="rating_min" value="4" onchange="minMaxValidate([1, 5], this)">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Maximum rating</label>
+                                        <input type="number" min="1" max="5" class="form-control" id="rating_max" value="5" onchange="minMaxValidate([1, 5], this)">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" onclick="submitForm()">Submit</button>
+                        </div>
+
+                        <div class="card-body" id="progress">
+                            <div class="progress">
+                                <div class="progress-bar" id="progressBar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- Scripts -->
+        <script>window.$ = window.jQuery = require('jquery');</script>
+        <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="./render.js"></script>
+    </body>
+
+</html>
